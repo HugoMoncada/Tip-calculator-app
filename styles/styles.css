@@ -217,7 +217,7 @@ button:hover{
 
     main{
         display: flex;
-        max-width: 1000px;
+        max-width: 900px;
         gap: 2rem;
         width: 80%;
     }
