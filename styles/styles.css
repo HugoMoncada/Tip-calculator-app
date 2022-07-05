@@ -248,4 +248,10 @@ button:hover{
     .total .price{
         font-size: 3rem;
     }
+
+    .bill__tips{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        text-align: center;
+    }
 } 

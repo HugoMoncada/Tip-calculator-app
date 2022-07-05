@@ -52,8 +52,8 @@ function reset(){
         bill: "", 
         people: ""
     }
-    total_amount.innerHTML = 0;
-    totalTip.innerHTML = 0;
+    total_amount.innerHTML = "$ 0.00";
+    totalTip.innerHTML = "$ 0.00";
     bill.value = "";
     people.value = "";
     customTip.value = ""; 
