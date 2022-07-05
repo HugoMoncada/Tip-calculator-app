@@ -1,0 +1,238 @@
+:root{
+
+/* ### Primary */
+--Strong-cyan: hsl(172, 67%, 45%);
+
+/* ### Neutral */
+--Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(180, 11%, 93%);
+--White: hsl(0, 0%, 100%);
+
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    background-color: var(--Light-grayish-cyan);
+    font-size: 62,5%;
+}
+
+
+main{
+    background-color: white;
+    padding: 27px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+    color: var(--Dark-grayish-cyan);
+    font-weight: lighter;
+    font-size: 1.6rem;
+    letter-spacing: 9px;
+    margin: 40px 0;
+}
+
+h2{
+    font-size: 1rem;
+    color: var(--Dark-grayish-cyan);
+    margin-bottom: 5px;
+}
+
+.split::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+
+.input input{
+    width: 100%;
+    padding: 10px;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 21px;
+    border-radius: 6px;
+    position: relative;
+    z-index: 0;
+}
+
+i{
+    color: var(--Grayish-cyan);
+    font-weight: bolder;
+    font-size: 19px;
+    position: absolute;
+    z-index: 1;
+    padding: 0 15px;
+}
+
+label{
+    display: inline-block;
+    padding: .7rem 1.8rem;
+    margin: 0.5em;
+    cursor: pointer;
+    border-radius: 0.25em;
+    background: var(--Light-grayish-cyan);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2), inset 0 -3px 0 rgba(0,0,0,0.22);
+    transition: 0.3s;
+    user-select: none;
+}
+
+label:hover{
+    cursor: pointer;
+}
+
+.bills{
+    margin-bottom: 20px;
+}
+
+.bill__tips{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+}
+
+.bill__tips input[type="text"]{
+    height: 55px;
+    align-self: center;
+    width: 88%;
+    justify-self: center;
+    text-align: right;
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    text-align: right;
+    color: var(--Very-dark-cyan);
+    font-weight: 700;
+    font-size: 21px;
+    border-radius: 6px;
+    padding: 0 10px;
+}
+
+input[type="text"]:focus{
+    border: 1px solid var(--Grayish-cyan);
+    outline: none;
+}
+
+input[type="radio"] + label{
+    background-color: var(--Very-dark-cyan);
+    color: white;
+    font-size: 1.3rem;
+}
+
+input[type="radio"]:checked + label{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+}
+
+.hidden{
+    display: none;
+}
+
+#persons-div{
+    margin-bottom: 30px;
+}
+
+.total{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.total p{
+    color: var(--Grayish-cyan);
+    font-size: .9rem;
+    margin: 0;
+}
+
+.total__title{
+    color: white;
+    font-size: 1rem;
+}
+
+.total__title::after{
+    content: "\a";
+    white-space: pre;
+}
+
+.total__tip_amount, .total__total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.total__total{
+    margin-bottom: 25px;
+}
+
+.total .price{
+    font-size: 2rem;
+    color: var(--Strong-cyan);
+}
+
+button{
+    width: 100%;
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    main{
+        display: flex;
+        max-width: 1000px;
+        gap: 2rem;
+    }
+
+    .bill{
+        width: 50%;
+    }
+
+    .total{
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+    }
+
+    .total__tip_amount{
+        margin-bottom: 30px;
+    }
+
+    button{
+        margin-top: auto;
+    }
+
+    .total .price{
+        font-size: 3rem;
+    }
+} 

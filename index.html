@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="/styles/styles.css">
+  <script src="/js/app.js" defer></script>
+  <title>Frontend Mentor | Tip calculator app</title>
+
+</head>
+<body>
+
+  <h1><span class="split">SPLI</span>TTER</h1>
+
+  <main>
+    <div class="bill">
+      <h2>Bill</h2>
+      <div class="input">
+        <i class='bx bx-dollar'></i>
+        <input type="text" required maxlength="6" id="bill" value="">
+      </div>
+      <h2>Select Tip %</h2>
+      <div class="bill__tips">
+        <input type="radio" id="5" name="tip" class="hidden" value="5" checked>
+        <label for="5">5%</label>
+        <input type="radio" id="10" name="tip" class="hidden" value="10">
+        <label for="10">10%</label>
+        <input type="radio" id="15" name="tip" class="hidden" value="15">
+        <label for="15">15%</label>
+        <input type="radio" id="25" name="tip" class="hidden" value="25">
+        <label for="25">25%</label>
+        <input type="radio" id="50" name="tip" class="hidden" value="50">
+        <label for="50">50%</label>
+        <input type="text" placeholder="Custom" maxlength="3" id="customTip">
+      </div>
+      <h2>Number of People</h2>
+      <div class="input" id="persons-div">
+        <i class='bx bxs-user'></i>
+        <input type="text" required maxlength="2" id="people" value="">
+      </div>
+    </div>
+    <div class="total">
+      <div class="total__tip_amount">
+        <p><span class="total__title">Tip Amount</span>/ person </p>
+        <p class="price" id="total_tip">$4.27</p>
+      </div>
+      <div class="total__total">
+        <p><span class="total__title">Total</span>/ person </p>
+        <p class="price" id="total_amount">$32.79</p>
+      </div>
+      <button id="reset">RESET</button>
+    </div>
+  </main>
+
+ 
+</body>
+</html>
