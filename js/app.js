@@ -42,8 +42,8 @@ function calculate(){
             selectedPercentage = Number(customTip.value);
         }
         let tipValue = Number((totalObj.bill  * (selectedPercentage / 100 ) ) / totalObj.people).toFixed(2);       
-        totalTip.innerHTML = tipValue;
-        total_amount.innerHTML = Number(totalObj.bill / totalObj.people + Number(tipValue)).toFixed(2); 
+        totalTip.innerHTML = "$" + tipValue;
+        total_amount.innerHTML = "$" + Number(totalObj.bill / totalObj.people + Number(tipValue)).toFixed(2); 
     }
 }
 
